@@ -66,17 +66,17 @@ import Logo from "./Logo.astro"
 <script >
   const menuBtn = document.getElementById('menu-btn');
   const modalMenu = document.querySelector("#modal-menu")
-  const menuItems = modalMenu.querySelectorAll('li>a ');
+  const menuItems = modalMenu ? modalMenu.querySelectorAll('li > a') : [];
   const closeBtn = document.querySelector("#close-btn")
   
   function toggleDropdownMenu() {
-    modalMenu.classList.toggle('hidden');
+    modalMenu?.classList.toggle('hidden');
   }
 
 
-  menuBtn.addEventListener('click',toggleDropdownMenu)
+  menuBtn?.addEventListener('click',toggleDropdownMenu)
 
-  closeBtn.addEventListener('click',toggleDropdownMenu)
+  closeBtn?.addEventListener('click',toggleDropdownMenu)
 
   menuItems.forEach(Item => {
     Item.addEventListener('click',toggleDropdownMenu);
@@ -121,14 +121,17 @@ import Logo from "./Logo.astro"
   }
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const { isIntersecting } = entry
-      if (isIntersecting) {
-        const color = entry.target.getAttribute("data-header-color")
-        headerEl.style.color = color
+  entries.forEach((entry) => {
+    const { isIntersecting } = entry;
+    if (isIntersecting) {
+      const color = entry.target.getAttribute("data-header-color");
+      if (color) { // Verificar si color no es null
+        headerEl.style.color = color;
       }
-    })
-  }, observerOptions)
+    }
+  });
+}, observerOptions);
+
 
   const sectionElements = document.querySelectorAll(".landing-section")
   sectionElements.forEach((section) => observer.observe(section))
