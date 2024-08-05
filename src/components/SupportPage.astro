@@ -1,0 +1,47 @@
+<!-- src/components/SupportPage.astro -->
+---
+import Layout from '../layouts/BaseLayout.astro'; // Ajusta la ruta si es necesario
+---
+
+<Layout title="Soporte">
+  <section id="support">
+    <h2>Soporte</h2>
+    <p>Bienvenido a la sección de soporte de Intelli-Fridge. Aquí encontrarás información útil para resolver problemas comunes y cómo ponerte en contacto con nuestro equipo de soporte.</p>
+
+    <section id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Cómo configuro mi cuenta?</h3>
+        <p>Para configurar tu cuenta, sigue estos pasos...</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué hago si olvido mi contraseña?</h3>
+        <p>Si olvidaste tu contraseña, puedes restablecerla a través del enlace de...</p>
+      </div>
+    </section>
+
+    <section id="guides">
+      <h2>Guías y Tutoriales</h2>
+      <ul>
+        <li><a href="/guia-inicial">Guía de Inicio Rápido</a></li>
+        <li><a href="/configuracion-avanzada">Configuración Avanzada</a></li>
+        <li><a href="/solucion-problemas">Resolución de Problemas Comunes</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto de Soporte</h2>
+      <p>Si necesitas asistencia adicional, no dudes en ponerte en contacto con nuestro equipo de soporte. Puedes hacerlo a través de los siguientes canales:</p>
+      <ul>
+        <li>Correo Electrónico: <a href="mailto:support@intelli-fridge.com">support@intelli-fridge.com</a></li>
+        <li>Teléfono: +123 456 7890</li>
+        <li>Formulario de Contacto: <a href="/contacto">Formulario en Línea</a></li>
+      </ul>
+    </section>
+
+    <section id="tickets">
+      <h2>Sistema de Tickets</h2>
+      <p>Para enviar un ticket de soporte, por favor visita nuestro <a href="/tickets">sistema de tickets</a> y proporciona toda la información necesaria para que podamos asistirte rápidamente.</p>
+    </section>
+  </section>
+</Layout>

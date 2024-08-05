@@ -1,18 +1,20 @@
 ---
-import Accessories from "../components/Accessories.astro";
+import Accessories from "../components/Download.astro";
 import HeroSection from "../components/HeroSection.astro";
 import LandingHeader from "../components/LandingHeader.astro";
-import ModelS from "../components/ModelS.astro";
-import ModelThree from "../components/ModelThree.astro";
-import ModelX from "../components/ModelX.astro";
-import ModelY from "../components/ModelY.astro";
-import PowerWall from "../components/PowerWall.astro";
+import Price from "../components/Price.astro";
+import Functions from "../components/Functions.astro";
+import Temperature from "../components/Temperature.astro";
+import Technologies from "../components/Technologies.astro";
 import Layout from "../layouts/Layout.astro";
+import {SignIn,SignOut} from "auth-astro/components";
 ---
 
 <Layout title="Intelli-Fridge">
+  <body>
+    
+  </body>
   <LandingHeader />
-
   <main
     class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth"
   >
@@ -20,19 +22,16 @@ import Layout from "../layouts/Layout.astro";
       <HeroSection />
     </div>
     <div class="snap-center">
-      <ModelY />
+      <Price />
     </div>
     <div class="snap-center">
-      <ModelThree />
+      <Functions />
     </div>
     <div class="snap-center">
-      <ModelS />
+      <Temperature />
     </div>
     <div class="snap-center">
-      <ModelX />
-    </div>
-    <div class="snap-center">
-      <PowerWall />
+      <Technologies />
     </div>
     <div class="snap-center">
       <Accessories />
