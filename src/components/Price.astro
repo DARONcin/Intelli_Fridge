@@ -9,22 +9,23 @@ import Section from "./Section.astro";
   id="price"
 >
   <div slot="footer" class="gap-x-6 flex mx-auto">
-    
     <a
       class="bg-white text-sm rounded font-medium px-12 py-2 transition-colors hover:bg-black hover:text-white inline-flex justify-center items-center text-black"
       href="/Pricewrapper"
     >
-      Saber más</a
-    >
+      Saber más
+    </a>
   </div>
 
-  <img
-    slot="background"
-    alt="Precio"
-    class="h-full w-full object-cover object-center"
-    src="model-s.avif"
-    id="bg-image-models"
-  />
+  <div slot="background" class="relative">
+    <img
+      alt="Precio"
+      class="h-full w-full object-cover object-center"
+      src="model-s.avif"
+      id="bg-image-models"
+    />
+    <div class="absolute inset-0 bg-gray-200 opacity-30"></div>
+  </div>
 </Section>
 
 <script>

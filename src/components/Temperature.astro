@@ -13,18 +13,19 @@ import Section from "./Section.astro"
       class="border-[3px] border-gray-600 bg-gray-600 text-sm rounded font-medium text-white px-12 py-2 inline-block transition-colors hover:border-gray-500 hover:bg-gray-500"
       href="/Temperaturewrapper"
     >
-      Consultar Datos</a
-    >
-   
+      Consultar Datos
+    </a>
   </div>
 
-  <img
-    slot="background"
-    alt="Realtime Data"
-    class="h-full w-full object-cover object-center"
-    src="model-x.avif"
-    id="bg-image-modelx"
-  />
+  <div slot="background" class="relative">
+    <img
+      alt="Realtime Data"
+      class="h-full w-full object-cover object-center"
+      src="model-x.avif"
+      id="bg-image-modelx"
+    />
+    <div class="absolute inset-0 bg-gray-800 opacity-50"></div>
+  </div>
 </Section>
 
 <script>
@@ -33,19 +34,17 @@ import Section from "./Section.astro"
       navigator.userAgent.indexOf("Edge") > -1 ||
       navigator.userAgent.indexOf("Edg") > -1
     ) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   }
 
-  let imageElement = document.querySelector(
-    "#bg-image-modelx"
-  ) as HTMLImageElement
+  let imageElement = document.querySelector("#bg-image-modelx") as HTMLImageElement;
 
   if (isEdge()) {
-    imageElement.src = "data2.jpg"
+    imageElement.src = "data2.jpg";
   } else {
-    imageElement.src = "data2.jpg"
+    imageElement.src = "data2.jpg";
   }
 </script>
