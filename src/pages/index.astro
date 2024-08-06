@@ -9,8 +9,23 @@ import Technologies from "../components/Technologies.astro";
 import Layout from "../layouts/Layout.astro";
 import {SignIn,SignOut} from "auth-astro/components";
 ---
+<script>
+  // Cargar datos iniciales
+fetchInitialData();
 
+// Configurar eventos
+setupEventListeners();
+
+function fetchInitialData() {
+throw new Error("Function not implemented.");
+}
+
+function setupEventListeners() {
+throw new Error("Function not implemented.");
+}
+</script>
 <Layout title="Intelli-Fridge">
+  
   <body>
     
   </body>
@@ -23,9 +38,6 @@ import {SignIn,SignOut} from "auth-astro/components";
     </div>
     <div class="snap-center">
       <Price />
-    </div>
-    <div class="snap-center">
-      <Functions />
     </div>
     <div class="snap-center">
       <Temperature />

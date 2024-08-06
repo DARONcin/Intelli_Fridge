@@ -1,47 +1,120 @@
-<!-- src/components/SupportPage.astro -->
 ---
+// Importa el Layout si es necesario
 import Layout from '../layouts/BaseLayout.astro'; // Ajusta la ruta si es necesario
+import LandingHeader6 from "../components/LandingHeader6.astro";
 ---
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+  <LandingHeader6 />
+</body>
 
 <Layout title="Soporte">
   <section id="support">
+    <br/>
     <h2>Soporte</h2>
     <p>Bienvenido a la sección de soporte de Intelli-Fridge. Aquí encontrarás información útil para resolver problemas comunes y cómo ponerte en contacto con nuestro equipo de soporte.</p>
-
+    <br/>
     <section id="faq">
       <h2>Preguntas Frecuentes</h2>
       <div class="faq-item">
-        <h3>¿Cómo configuro mi cuenta?</h3>
-        <p>Para configurar tu cuenta, sigue estos pasos...</p>
+        <h3>¿Qué hago si olvido mi contraseña?</h3>
+        <p>Si olvidaste tu contraseña, puedes darle click a "olvide mi contraseña", te llegara un correo con los pasos a seguir para recuperarla.</p>
       </div>
       <div class="faq-item">
-        <h3>¿Qué hago si olvido mi contraseña?</h3>
-        <p>Si olvidaste tu contraseña, puedes restablecerla a través del enlace de...</p>
+        <h3>¿Para que dispositivos esta disponible la aplicacion movil?</h3>
+        <p>Por el momento solo esta disponible para dispositivos Android, en futuras actualizaciones se podra descargar en IOS.</p>
       </div>
-    </section>
-
-    <section id="guides">
-      <h2>Guías y Tutoriales</h2>
-      <ul>
-        <li><a href="/guia-inicial">Guía de Inicio Rápido</a></li>
-        <li><a href="/configuracion-avanzada">Configuración Avanzada</a></li>
-        <li><a href="/solucion-problemas">Resolución de Problemas Comunes</a></li>
-      </ul>
+      <div class="faq-item">
+        <h3>¿Cómo descargar la aplicacion?</h3>
+        <p>En nuestra aplicacion web existe un apartado en donde se puede descargar nuestra aplicacion. Es una apk y se tiene que dar autorizacion desde configuracion de su dispositivo movil.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cuanto dura mi periodo de garantia</h3>
+        <p>Contamos con un periodo de garantia de 6 meses, solo por daño en componentes, no nos hacemo responsables de mal uso de nuestro kit.</p>
+      </div>
     </section>
 
     <section id="contact">
       <h2>Contacto de Soporte</h2>
       <p>Si necesitas asistencia adicional, no dudes en ponerte en contacto con nuestro equipo de soporte. Puedes hacerlo a través de los siguientes canales:</p>
       <ul>
-        <li>Correo Electrónico: <a href="mailto:support@intelli-fridge.com">support@intelli-fridge.com</a></li>
-        <li>Teléfono: +123 456 7890</li>
-        <li>Formulario de Contacto: <a href="/contacto">Formulario en Línea</a></li>
+        <li>Correo Electrónico: <a href="mailto:bitbusters.technologies@gmail.com">bitbusters.technologiest@gmail.com</a></li>
+        <li>Teléfono: +52 614-376-81-16</li>
+        
       </ul>
     </section>
-
-    <section id="tickets">
-      <h2>Sistema de Tickets</h2>
-      <p>Para enviar un ticket de soporte, por favor visita nuestro <a href="/tickets">sistema de tickets</a> y proporciona toda la información necesaria para que podamos asistirte rápidamente.</p>
-    </section>
   </section>
+
+  <style>
+    /* Estilos para el contenedor principal del Layout */
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('../../public/support.jpg') no-repeat center center fixed; 
+      background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+      color: #333; /* Color de texto predeterminado */
+    }
+
+    #support {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para mejorar la legibilidad del texto */
+      max-width: 800px;
+      margin: 0 auto; /* Centra el contenido */
+      position: relative;
+      z-index: 1;
+    }
+
+    #support h2 {
+      font-size: 1.8rem;
+      color: #126b6d; /* Color del título */
+      border-bottom: 1px solid #e0e0e0; /* Línea sutil debajo del título */
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #e0e0e0; /* Línea sutil debajo de cada FAQ */
+      padding-bottom: 0.5rem;
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      color: #0b0b0b; /* Color de las preguntas frecuentes */
+      margin: 0;
+    }
+
+    .faq-item p {
+      margin: 0.5rem 0;
+      color: #555; /* Texto más suave para las respuestas */
+    }
+
+    #guides ul, #contact ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #guides li, #contact li {
+      margin: 0.5rem 0;
+    }
+
+    #guides a, #contact a {
+      color: #126b6d; /* Color de los enlaces */
+      text-decoration: none;
+    }
+
+    #guides a:hover, #contact a:hover, #tickets a:hover {
+      text-decoration: underline;
+    }
+
+    #tickets a { 
+      color: #ff6773; /* Color del enlace del sistema de tickets */
+    }
+
+    #tickets p {
+      margin: 1rem 0;
+    }
+  </style>
 </Layout>

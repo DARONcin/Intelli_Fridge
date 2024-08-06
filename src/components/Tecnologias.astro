@@ -1,0 +1,209 @@
+---
+import techImage from '../images/tech.jpg'; // Ajusta la ruta según sea necesario
+import LandingHeader5 from "../components/LandingHeader5.astro";
+---
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* Estilo global para el fondo */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.background-container {
+    position: relative;
+    min-height: 100vh; /* Asegúrate de que cubra toda la pantalla */
+    background-image: url('../../public/tech.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Ajusta la opacidad si es necesario */
+}
+
+/* Estilos de la sección de tecnologías */
+.technologies-section {
+    color: white;
+    padding: 4rem 1rem;
+}
+
+.technologies-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.technologies-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.technologies-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.technologies-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.technologies-card {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.technologies-card:hover {
+    transform: scale(1.05);
+}
+
+.technologies-card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.technologies-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.technologies-card-description {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Estilos de la sección de componentes en una cuadrícula 3x3 */
+.components-section {
+    padding: 4rem 1rem;
+}
+
+.components-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.components-card {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.components-card:hover {
+    transform: scale(1.05);
+}
+
+.components-card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.components-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.components-card-description {
+    color: #333;
+    margin-bottom: 1rem;
+}
+</style>
+
+<body>
+  <LandingHeader5 />
+  <div class="background-container">
+    <!-- Sección de Tecnologías -->
+    <section class="technologies-section">
+      <div class="technologies-content">
+        <h1 class="technologies-title">Tecnologías</h1>
+        <br/>
+        <div class="technologies-cards">
+          <div class="technologies-card">
+            <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/react_original_logo_icon_146374.png" alt="React" class="technologies-card-image" />
+            <h2 class="technologies-card-title">React</h2>
+            <p class="technologies-card-description">Una biblioteca de JavaScript para construir interfaces de usuario. Fácil de usar acompañado por CSS.</p>
+          </div>
+          <div class="technologies-card">
+            <img src="https://cdn.icon-icons.com/icons2/3911/PNG/512/astro_logo_icon_247543.png" alt="Astro" class="technologies-card-image" />
+            <h2 class="technologies-card-title">Astro</h2>
+            <p class="technologies-card-description">Framework web para construir sitios web. Astro es conocido por ser pionero en una nueva arquitectura frontend para reducir la sobrecarga y complejidad de JavaScript.</p>
+          </div>
+          <div class="technologies-card">
+            <img src="https://cdn.icon-icons.com/icons2/2148/PNG/512/tailwind_icon_131947.png" alt="Tailwind" class="technologies-card-image" />
+            <h2 class="technologies-card-title">Tailwind</h2>
+            <p class="technologies-card-description">Framework de CSS de código abierto​ para el diseño de páginas web. La principal característica es que, no genera una serie de clases predefinidas para elementos como botones o tablas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Componentes -->
+    <section class="components-section">
+      <div class="technologies-content">
+        <h1 class="technologies-title">Componentes</h1>
+        <br/>
+        <div class="components-cards">
+          <div class="components-card">
+            <img src="https://m.media-amazon.com/images/I/61o2ZUzB4XL._AC_SL1027_.jpg" alt="ESP-32" class="components-card-image" />
+            <h2 class="components-card-title">ESP-32</h2>
+            <p class="components-card-description">Microcontrolador que integra tecnologías WiFi y Bluetooth, que le proporcionan conectividad con internet a otros dispositivos.</p>
+          </div>
+          <div class="components-card">
+            <img src="https://www.330ohms.com/cdn/shop/products/photo_IC-20010_DHT11_DigitalTemperatureHumiditySensor_DHT11_01_740x740.png?v=1627344523" alt="Sensor DHT11" class="components-card-image" />
+            <h2 class="components-card-title">Sensor DHT11</h2>
+            <p class="components-card-description">Sensor de temperatura y humedad que utiliza un sensor capacitivo de humedad y un termistor para medir el aire circundante, y muestra los datos mediante una señal digital en el pin de datos.</p>
+          </div>
+          <div class="components-card">
+            <img src="https://m.media-amazon.com/images/I/610VbLyCGDL._AC_UF894,1000_QL80_.jpg" alt="ESP32 Cam" class="components-card-image" />
+            <h2 class="components-card-title">ESP32 Cam</h2>
+            <p class="components-card-description">Módulo de cámara con ESP32 que permite la captura de imágenes y transmisión de video.</p>
+          </div>
+          <div class="components-card">
+            <img src="https://inalarm.gt/image/cache/data/Categorias/Parqueo/zkteco/Bumping%20Bounce-2-800x800.png" alt="Sensor de barrera" class="components-card-image" />
+            <h2 class="components-card-title">Sensor de barrera</h2>
+            <p class="components-card-description">Sensor utilizado para detectar la presencia de objetos o personas mediante una barrera de luz infrarroja.</p>
+          </div>
+          <div class="components-card">
+            <img src="https://electronicathido.com/assets/recursosImagenes/productos/702/imagenes/16x2azul.jpg" alt="TFT 3.5" class="components-card-image" />
+            <h2 class="components-card-title">Display</h2>
+            <p class="components-card-description">Una pantalla LCD es una pantalla plana y delgada formada por un número de píxeles en color o monocromos colocados delante de una fuente de luz o reflectora. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>

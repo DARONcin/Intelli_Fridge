@@ -1,0 +1,41 @@
+---
+import Logo from "./Logo.astro";
+import { signInWithGoogle } from "../components/firebaseConfig";
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registrarse</title>
+    <!-- Incluye Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-900 text-white">
+    <header id="landing-header" class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
+      <div class="flex flex-grow basis-0">
+        <a href="./"><Logo /></a>
+      </div>
+    </header>
+    <main class="flex items-center justify-center min-h-screen">
+      <section class="register-section text-center">
+        <h1 class="text-3xl mb-4">Registrarse</h1>
+        <button id="google-signin-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+          Registrarse con Google
+        </button>
+      </section>
+    </main>
+    <script type="module">
+      import { signInWithGoogle } from "../components/firebaseConfig";
+
+      document.getElementById("google-signin-btn").addEventListener("click", async () => {
+        try {
+          const result = await signInWithGoogle();
+          console.log("Usuario autenticado:", result.user);
+          // No redirijas a otra página; el flujo de autenticación debería abrir una ventana emergente
+        } catch (error) {
+          console.error("Error en la autenticación:", error);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+---
+import priceImage from '../images/price2.jpg'; // Asegúrate de que la ruta sea correcta
+import Layout from '../layouts/BaseLayout.astro'; // Ajusta la ruta si es necesario
+import LandingHeader2 from "../components/LandingHeader2.astro";
+---
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.precios-section {
+    position: relative;
+    color: white;
+    padding: 4rem 1rem;
+    min-height: 100vh; /* Asegura que la sección tenga al menos la altura de la ventana */
+    overflow: hidden;
+    background-color: transparent; /* Elimina cualquier color de fondo */
+}
+
+.precios-background {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../public/price2.jpg'); /* Usa una ruta estática aquí */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.precios-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.precios-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.precios-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.precios-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.precios-card {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.precios-card:hover {
+    transform: scale(1.05);
+}
+
+.precios-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.precios-card-description {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.precios-card-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+</style>
+
+<body>
+    <LandingHeader2 />
+</body>
+
+
+<section class="precios-section">
+  <div class="precios-background"></div>
+  <div class="precios-content">
+    <h1 class="precios-title">Precios del kit</h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="precios-cards">
+      <div class="precios-card">
+        <h2 class="precios-card-title">Servicio Básico</h2>
+        <p class="precios-card-description"> - Monitoreo de temperatura en tiempo real.<br/> - Sensor de distancia. <br/> - App movil. </p>
+        <p class="precios-card-price">$3,499</p>
+      </div>
+      <div class="precios-card">
+        <h2 class="precios-card-title">Servicio Premium</h2>
+        <p class="precios-card-description">- Notas Digitales.<br/> - Bloqueo mediante huella dactilar.<br/> - Pantalla para visualizar las notas.</p>
+        <p class="precios-card-price">$4,499</p>
+      </div>
+    </div>
+  </div>
+</section>
