@@ -12,30 +12,21 @@ import Logo from "./Logo.astro"
 
   <nav class="hidden xl:block sm:hidden">
     <ul
-      class="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+      class="flex text-sm transition-colors duration-500 text-current font-medium inline-block px-4 py-2"
     >
-      <li><a href="#price"></a></li>
-
+      <li><a href="#price">Price</a></li>
     </ul>
   </nav>
-
-  <nav class="flex flex-grow justify-end basis-0">
-    <ul
-      class="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
-    >
-    </ul>
-  </nav>
-
-  <nav id="modal-menu" class=" hidden xl:hidden flex flex-col bg-white fixed top-0 left-0 right-0 bottom-0 ">
-    <button id="close-btn" class=" w-screen flex justify-end p-5">
-      <img  class="text-black h-6 " src="/close-icon.svg" alt="close image">
+  
+  <nav id="modal-menu" class="hidden xl:hidden flex flex-col bg-white fixed top-0 left-0 right-0 bottom-0">
+    <button id="close-btn" class="w-screen flex justify-end p-5">
+      <img class="h-6" src="/close-icon.svg" alt="close icon">
     </button>
-      <ul
-      class="flex flex-col mt-4 [&>li>a]:transition-colors [&>li]:m-3  [&>li>a]:flex [&>li>a]:justify-between [&>li>a]:duration-200 [&>li>a]:text-black [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-6 [&>li>a]:py-3 [&>li>a]:rounded-md [&>li>a]:w-full"
-      >
-
+    <ul
+      class="flex flex-col mt-4 transition-colors duration-200 text-black font-medium inline-block px-6 py-3 rounded-md w-full"
+    >
     </ul>
-  </nav>
+  </nav>  
 
   <div
     id="menu-backdrop"
