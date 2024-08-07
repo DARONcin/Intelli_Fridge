@@ -1,0 +1,52 @@
+---
+import Accessories from "../components/Download.astro";
+import HeroSection from "../components/HeroSection.astro";
+import LandingHeader from "../components/LandingHeader.astro";
+import Price from "../components/Price.astro";
+import Functions from "../components/Functions.astro";
+import Temperature from "../components/Temperature.astro";
+import Technologies from "../components/Technologies.astro";
+import Layout from "../layouts/Layout.astro";
+import {SignIn,SignOut} from "auth-astro/components";
+---
+<script>
+  // Cargar datos iniciales
+fetchInitialData();
+
+// Configurar eventos
+setupEventListeners();
+
+function fetchInitialData() {
+throw new Error("Function not implemented.");
+}
+
+function setupEventListeners() {
+throw new Error("Function not implemented.");
+}
+</script>
+<Layout title="Intelli-Fridge">
+  
+  <body>
+    
+  </body>
+  <LandingHeader />
+  <main
+    class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth"
+  >
+    <div class="snap-center">
+      <HeroSection />
+    </div>
+    <div class="snap-center">
+      <Price />
+    </div>
+    <div class="snap-center">
+      <Temperature />
+    </div>
+    <div class="snap-center">
+      <Technologies />
+    </div>
+    <div class="snap-center">
+      <Accessories />
+    </div>
+  </main>
+</Layout>

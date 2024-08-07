@@ -1,0 +1,47 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_image$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/Functionwrapper\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/Pricewrapper\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/Registerwrapper\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/Supportwrapper\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/Technowrapper\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/Temperaturewrapper\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "_render"
+		}
+	]
+}
